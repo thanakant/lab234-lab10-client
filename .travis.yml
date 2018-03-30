@@ -2,7 +2,9 @@ language: node_js
 node_js:
 - 8.4.0
 sudo: required
-
+cache:
+  directories:
+  - node_modules
 before_install:
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 - npm i -D uglifyjs-webpack-plugin
